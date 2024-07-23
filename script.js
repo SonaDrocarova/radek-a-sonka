@@ -1,13 +1,25 @@
 document.getElementById('rsvp-form').addEventListener('submit', function(event) {
     event.preventDefault();
-    const name = document.getElementById('name').value;
-    const attending = document.getElementById('attending').value;
-    const notes = document.getElementById('notes').value;
 
-    alert(`Děkujeme za vaši odpověď, ${name}!`);
-    // Here you can add code to send this data to a server if needed
-    
+    const formData = new FormData(event.target);
+    fetch(event.target.action, {
+        method: 'POST',
+        body: formData,
+        headers: {
+            'Accept': 'application/json'
+        }
+    }).then(response => {
+        if (response.ok) {
+            alert('Děkujeme za vaši odpověď!');
+            event.target.reset();
+        } else {
+            alert('Došlo k chybě. Zkuste to prosím znovu.');
+        }
+    }).catch(error => {
+        alert('Došlo k chybě. Zkuste to prosím znovu.');
+    });
 });
+
 
 // Countdown timer
 const countdownElement = document.getElementById('countdown');
@@ -33,3 +45,19 @@ function updateCountdown() {
 
 const countdownInterval = setInterval(updateCountdown, 1000);
 updateCountdown();
+
+// Slideshow functionality
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+    let i;
+    const slides = document.getElementsByClassName("mySlides");
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}
+    slides[slideIndex-1].style.display = "block";
+    setTimeout(showSlides, 4000); // Change image every 4 seconds
+}

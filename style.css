@@ -1,9 +1,10 @@
 body {
-    font-family: 'Red Hat Display', sans-serif;
+    font-family: 'Playwrite CZ', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f9f9f9;
-    color: #333;
+    color: #8a8a8a;
+    font-weight: 200;
 }
 
 header {
@@ -11,6 +12,8 @@ header {
     background-color: #b0c4de;
     color: white;
     padding: 2em 0;
+    font-weight: 400;
+
 }
 /* header {
     text-align: center;
@@ -21,12 +24,13 @@ header {
 } */
 header h1 {
     margin: 0;
-    font-size: 2.5em;
+    font-size: 3em;
 }
 
 header p {
     margin: 0;
     font-size: 1.2em;
+    /* font-weight: 100; */
 }
 
 countdown {
@@ -103,13 +107,56 @@ form button:hover {
 }
 .story-photo {
     width: 100%;
-    max-width: 100%;
+    max-width: 400px;
     height: auto;
     display: block;
     margin: 1em 0;
     border-radius: 8px;
 }
 
+
+.slideshow-container {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+    height: 600px; /* Set a fixed height for the slideshow container */
+    overflow: hidden; /* Ensure overflow is hidden */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff; /* Add a background color for better visibility */
+}
+
+.mySlides {
+    display: none;
+}
+
+.mySlides img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+
+.story-content {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Add some space between the image and text */
+}
+
+.story-content p {
+    flex: 1;
+    margin: 0;
+}
 footer {
     text-align: center;
     padding: 1em;
