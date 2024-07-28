@@ -193,8 +193,8 @@ form button:hover {
     font-weight: 100;
     padding-top: 0; /* Remove padding if any */
     overflow: hidden; /* Clear floats */
-
-
+    text-justify: auto;
+    text-align: justify;
 }
 
 /* .story-content p {
@@ -206,7 +206,7 @@ form button:hover {
     flex: 1; /* Allow the text to take up one part of the space */
     padding: 1em;
     max-width: 50%; /* Ensure it does not take more than half of the section */
-    text-align: left; /* Align text to the left */
+    text-align: justify; /* Align text to the left */
 }
 
 .story-content .slideshow-container {
