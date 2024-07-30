@@ -113,18 +113,24 @@ h2 {
 form {
     display: flex;
     flex-direction: column;
+    align-items: flex-start; /* Align form elements to the left */
+    width: 50%; /* Set the form width to 50% */
+    margin: 0 auto; /* Center the form horizontally */
 }
 
 form label {
     margin-top: 0.5em;
+    width: 100%; /* Ensure labels take the full width of the form */
 }
 
-form input, form select, form button {
+form input, form select, form button, form textarea {
     margin-top: 0.5em;
     padding: 0.5em;
     font-size: 1em;
     border: 1px solid #ccc;
     border-radius: 4px;
+    width: 100%; /* Ensure form controls take the full width of the form */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
 }
 
 form button {
@@ -132,11 +138,13 @@ form button {
     color: white;
     border: none;
     cursor: pointer;
+    align-self: center; /* Center the button within the form */
 }
 
 form button:hover {
     background-color: #9bb0c6;
 }
+
 
 /* Timeline styles */
 #timeline {
