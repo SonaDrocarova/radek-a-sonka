@@ -6,7 +6,7 @@ body {
     background-color: #f9f9f9;
     color: #4b5c73;
     font-weight: 0;
-    zoom: 0.8; /* Adjust the zoom level */
+    zoom: 0.75; /* Adjust the zoom level */
 }
 
 header {
@@ -363,7 +363,7 @@ form button:hover {
     /* background-color: #fff; */
     padding: 0.5em 1em;
     border-radius: 8px;
-    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .rsvp-message a {
