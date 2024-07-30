@@ -8,24 +8,14 @@ body {
     font-weight: 0;
 }
 
-/* header {
-    text-align: center;
-    background-color: #b0c4de;
-    color: white;
-    padding: 2em 0;
-    font-weight: 400;
-    text-transform: uppercase;
-} */
- header {
+header {
     text-align: center;
     background: url('background.jpg') no-repeat center center;
     background-size: cover;
     color: #4b5c73;
     padding: 2em 0;
     text-transform: uppercase;
-
 }
-
 
 .decorative-date {
     display: flex;
@@ -62,7 +52,6 @@ body {
 .decorative-date::after {
     right: 0;
 }
-
 
 header h1 {
     margin: 0;
@@ -120,23 +109,6 @@ h2 {
     font-weight: 100;
 }
 
-.detail-section {
-    margin-bottom: 2em;
-    font-style: italic;
-    font-weight: 100;
-}
-
-.detail-section h3 {
-    text-align: left;
-    color: #4b5c73;
-    margin-top: 0;
-    font-family: 'Cinzel';
-    text-transform: uppercase;
-    font-style: normal;
-    font-size: x-large;
-    font-weight: 200;
-}
-
 form {
     display: flex;
     flex-direction: column;
@@ -164,22 +136,6 @@ form button {
 form button:hover {
     background-color: #9bb0c6;
 }
-
-.qr-codes {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 1em;
-}
-
-.qr-codes div {
-    text-align: center;
-}
-
-.qr-codes img {
-    max-width: 100px;
-    height: auto;
-}
-
 
 /* Timeline styles */
 #timeline {
@@ -237,7 +193,7 @@ form button:hover {
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: left;    
+    text-align: left;
 }
 
 .timeline-item:nth-child(odd) .timeline-content {
@@ -262,14 +218,7 @@ form button:hover {
     margin-bottom: 0.5em; /* Maintain some space below the header */
     font-family: 'Cinzel', serif;
     text-transform: uppercase;
-
 }
-/* .timeline-content h3 {
-    margin-top: 0;
-    color: #4b5c73;
-    font-family: 'Cinzel', serif;
-    text-transform: uppercase;
-} */
 
 .timeline-content p {
     margin: 0;
@@ -308,17 +257,25 @@ form button:hover {
     transform: translateX(-50%);
 }
 
+#event-details {
+    padding: 2em;
+    background-color: #c4dbf4; /* Light shade of blue */
+    border-radius: 8px;
+}
 
-.event-columns {
+#event-details .event-columns {
     display: flex;
-    justify-content: space-around;
-    margin-top: 2em;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1.5em;
 }
 
 .event-column {
-    flex: 1;
-    margin: 0 1em;
+    flex: 1 1 calc(33.333% - 2em); /* Ensure three columns per row */
+    box-sizing: border-box;
     text-align: center;
+    padding: 1.5em;
+    border-radius: 8px;
 }
 
 .event-icon {
@@ -340,8 +297,9 @@ form button:hover {
 .event-text h3 {
     color: #4b5c73;
     font-family: 'Cinzel', serif;
+    font-weight: 100;
+    text-transform: uppercase;
     margin-bottom: 0.5em;
-    
 }
 
 .event-text p {
@@ -351,10 +309,37 @@ form button:hover {
     margin: 0.5em 0;
 }
 
-
-footer {
-    text-align: center;
-    padding: 1em;
-    background-color: #333;
-    color: white;
+/* QR code container styles */
+.qr-codes {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 1em;
 }
+
+.qr-code {
+    text-align: center;
+}
+
+.qr-code p {
+    margin-bottom: 0.5em;
+    font-weight: bold;
+}
+
+.qr-code img {
+    max-width: 100px;
+    height: auto;
+    border: 1px solid #4b5c73;
+    border-radius: 8px;
+    padding: 0.5em;
+    background-color: #f9f9f9;
+}
+
+/* Toggle icon styles */
+.toggle-qr {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: #4b5c73;
+    font-size:
