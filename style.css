@@ -27,6 +27,43 @@ body {
 }
 
 
+.decorative-date {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1em 0;
+    font-size: 2em;
+    font-family: 'Cinzel', serif;
+    color: #4b5c73;
+    position: relative;
+    width: 100%;
+}
+
+.date-text {
+    padding: 0 15px;
+    font-weight: 100;
+    z-index: 1;
+    font-size: 1.5em;
+}
+
+.decorative-date::before, .decorative-date::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 40%;
+    height: 2px;
+    background-color: #4b5c73;
+}
+
+.decorative-date::before {
+    left: 0;
+}
+
+.decorative-date::after {
+    right: 0;
+}
+
+
 header h1 {
     margin: 0;
     font-size: 3em;
