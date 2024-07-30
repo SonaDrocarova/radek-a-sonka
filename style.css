@@ -93,7 +93,7 @@ section:nth-of-type(3) {
 }
 
 section:nth-of-type(4) {
-    background-color: #bac6d5; /* Another shade of dusty blue */
+    background-color: #f2f4f7; /* Another shade of dusty blue */
 }
 
 section:not(:first-of-type) {
@@ -259,7 +259,7 @@ form button:hover {
 
 #event-details {
     padding: 2em;
-    background-color: #c4dbf4; /* Light shade of blue */
+    background-color: #c6d9ee; /* Light shade of blue */
     border-radius: 8px;
 }
 
@@ -342,4 +342,25 @@ form button:hover {
     align-items: center;
     cursor: pointer;
     color: #4b5c73;
-    font-size:
+}
+
+.rsvp-message {
+    text-align: left;
+    margin: 1em 0;
+    font-size: 1.2em;
+    margin-left: 2em;
+}
+
+.rsvp-message a {
+    color: #4b5c73;
+    text-decoration: underline;
+    font-weight: lighter;
+    font-style: italic;
+    cursor: pointer;
+    font-size: small;
+}
+
+.rsvp-message a:hover {
+    color: #9bb0c6;
+}
+
