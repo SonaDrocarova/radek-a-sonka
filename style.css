@@ -7,6 +7,7 @@ body {
     color: #4b5c73;
     font-weight: 0;
     zoom: 0.75; /* Adjust the zoom level */
+    font-size: x-large;
 }
 
 header {
@@ -16,7 +17,9 @@ header {
     color: #4b5c73;
     padding: 1.5em 0; /* Reduce padding */
     text-transform: uppercase;
+    font-family: "Cormorant Garamond", serif;
 }
+
 
 .decorative-date {
     display: flex;
@@ -34,7 +37,8 @@ header {
     padding: 0 10px; /* Reduce padding */
     font-weight: 100;
     z-index: 1;
-    font-size: 1.2em; /* Scale down font size */
+    font-size: 2em; /* Scale down font size */
+    font-family: "Cormorant Garamond", serif;
 }
 
 .decorative-date::before, .decorative-date::after {
