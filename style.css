@@ -336,7 +336,7 @@ form button:hover {
 }
 
 .qr-code img {
-    max-width: 100px;
+    max-width: 300px;
     height: auto;
     border: 1px solid #4b5c73;
     border-radius: 8px;
