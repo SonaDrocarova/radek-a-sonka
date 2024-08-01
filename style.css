@@ -16,8 +16,11 @@ header {
     background-size: cover;
     color: #4b5c73;
     padding: 1.5em 0; /* Reduce padding */
-    text-transform: uppercase;
-    font-family: "Cormorant Garamond", serif;
+    /* text-transform: uppercase; */
+    font-family: "Alex Brush", cursive;
+    font-weight: 100;
+    font-style: normal;
+    font-size: 1.5em;
 }
 
 
@@ -377,7 +380,7 @@ form button:hover {
     font-weight: lighter;
     font-style: italic;
     cursor: pointer;
-    font-size: small;
+    font-size: medium;
 }
 
 .rsvp-message a:hover {
@@ -385,7 +388,7 @@ form button:hover {
 }
 footer {
     text-align: center;
-    padding: .3em;
+    padding: .1em;
     background-color: #4b5c73;
     color: white;
     font-family: "Alex Brush", cursive;
