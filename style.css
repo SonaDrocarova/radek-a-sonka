@@ -71,6 +71,7 @@ header p {
 #countdown {
     margin-top: 0.5em; /* Reduce margin */
     font-size: 1.2em; /* Scale down font size */
+    font-family: 'Cinzel', serif;
     background: #b0c4de;
     padding: 0.5em;
     border-radius: 5px;
@@ -381,4 +382,14 @@ form button:hover {
 
 .rsvp-message a:hover {
     color: #9bb0c6;
+}
+footer {
+    text-align: center;
+    padding: .3em;
+    background-color: #4b5c73;
+    color: white;
+    font-family: "Alex Brush", cursive;
+    font-weight: 100;
+    font-style: normal;
+    font-size: 2.5em;
 }
