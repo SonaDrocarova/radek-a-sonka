@@ -173,10 +173,15 @@
         <form id="rsvp-form" action="https://formspree.io/f/mnnajzrz" method="POST">
             <label for="name">Jméno:</label>
             <input type="text" id="name" name="name" required>
-            <label for="attending">Zúčastníte se?</label>
+            <label for="attending">Zúčastním se:</label>
             <select id="attending" name="attending" required>
                 <option value="yes">Ano</option>
                 <option value="no">Ne</option>
+            </select>
+            <label for="accomodation">Potřebuji ubytování den před:</label>
+            <select id="accomodation" name="accomodation" required>
+                <option value="no">Ne</option>
+                <option value="yes">Ano</option>
             </select>
             <label for="notes">Další poznámky (otázky, požiadavky, alergie na jedlo alebo preferencie):</label>
             <textarea id="notes" name="notes" rows="4"></textarea>

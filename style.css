@@ -167,7 +167,7 @@ form button:hover {
     flex-direction: column;
     align-items: center;
     position: relative;
-    max-width: 800px;
+    max-width: 1400px;
     margin: 0 auto;
 }
 
@@ -198,8 +198,8 @@ form button:hover {
 }
 
 .timeline-image img {
-    width: 160px; /* Scale down image size */
-    height: 160px; /* Scale down image size */
+    width: 250px; /* Scale down image size */
+    height: 250px; /* Scale down image size */
     border-radius: 50%;
     object-fit: cover;
 }
@@ -250,8 +250,8 @@ form button:hover {
     background-color: #fff;
     border: 3px solid #4b5c73;
     border-radius: 50%;
-    width: 30px; /* Scale down icon size */
-    height: 30px; /* Scale down icon size */
+    width: 60px; /* Scale down icon size */
+    height: 60px; /* Scale down icon size */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -260,7 +260,7 @@ form button:hover {
 
 .timeline-icon i {
     color: #4b5c73;
-    font-size: 15px; /* Scale down icon size */
+    font-size: 35px; /* Scale down icon size */
 }
 
 .timeline-container::before {
