@@ -69,3 +69,11 @@ function toggleQRCode(id) {
         qrCodes.style.display = "none";
     }
 }
+function toggleDetails(element) {
+    element.classList.toggle('active');
+    if (element.classList.contains('active')) {
+        element.style.cursor = 'default'; /* Change cursor to default when item is expanded */
+    } else {
+        element.style.cursor = 'pointer'; /* Change cursor back to pointer when item is collapsed */
+    }
+}

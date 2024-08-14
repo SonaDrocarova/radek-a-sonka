@@ -570,10 +570,34 @@ body {
     font-weight: 100;
     margin-bottom: 0.2em;
     font-size: 1.5em;
+
 }
 
 .programme-content p {
     margin: 0;
     font-style: italic;
     font-weight: 100;
+    text-decoration: underline; /* Add underline to text */
+
+}
+.programme-content h4 {
+    margin: 0;
+    font-style: italic;
+    font-weight: 100;
+
+}
+
+.programme-details {
+    display: none;
+    margin-top: 0.5em;
+    font-size: 1em;
+    color: #4b5c73;
+}
+
+.programme-item.active .programme-details {
+    display: block;
+    
+}
+.programme-item {
+    cursor: pointer; /* This makes the cursor change to a pointer when hovering */
 }
