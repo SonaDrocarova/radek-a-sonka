@@ -664,3 +664,40 @@ body {
         font-size: 1em;
     }
 }
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2em; /* Scale down font size */
+    }
+
+    .decorative-date {
+        margin: 0.3em 0;
+        font-size: 1.2em;
+    }
+
+    .date-text {
+        font-size: 1.5em; /* Scale down font size */
+    }
+
+    .decorative-date::before, .decorative-date::after {
+        width: 25%; /* Shorten the lines on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5em; /* Scale down font size further */
+    }
+
+    .decorative-date {
+        margin: 0.2em 0;
+        font-size: 1em;
+    }
+
+    .date-text {
+        font-size: 1.2em; /* Further reduce font size */
+    }
+
+    .decorative-date::before, .decorative-date::after {
+        width: 20%; /* Further shorten the lines on very small screens */
+    }
+}
