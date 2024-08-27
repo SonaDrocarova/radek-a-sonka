@@ -701,3 +701,87 @@ body {
         width: 20%; /* Further shorten the lines on very small screens */
     }
 }
+
+//* Navigation bar styles */
+#navbar {
+    background-color: #4b5c73;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center; /* Center the content horizontally */
+    align-items: center;
+    padding: 1em; /* Single padding */
+}
+
+#menu-icon {
+    display: none; /* Initially hidden */
+    font-size: 2em;
+    color: white;
+    cursor: pointer;
+}
+
+#navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Ensure the menu items are centered */
+    gap: 2em;
+    align-items: center;
+}
+
+#navbar ul li {
+    display: inline;
+}
+
+#navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-family: 'Cinzel', serif;
+    text-transform: uppercase;
+}
+
+#navbar ul li a:hover {
+    color: #9bb0c6;
+}
+
+@media (max-width: 768px) {
+    #menu-icon {
+        display: block; /* Show the menu icon on smaller screens */
+    }
+
+    #nav-links {
+        display: none; /* Hide the nav links by default */
+        flex-direction: column;
+        width: 100%;
+        background-color: #4b5c73;
+        position: absolute;
+        top: 100%;
+        left: 0;
+    }
+
+    #nav-links.active {
+        display: flex; /* Show the nav links when the menu is toggled */
+    }
+
+    #navbar ul {
+        flex-direction: column; /* Stack menu items vertically */
+        width: 100%;
+        text-align: center;
+    }
+
+    #navbar ul li {
+        display: block;
+        padding: 1em 0;
+        border-bottom: 1px solid #9bb0c6;
+    }
+
+    #navbar ul li:last-child {
+        border-bottom: none;
+    }
+}

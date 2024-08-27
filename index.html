@@ -19,13 +19,23 @@
     </head>
 <body>
     <nav id="navbar">
-        <ul>
+        <div id="menu-icon" onclick="toggleMenu()">☰</div>
+        <ul id="nav-links">
             <li><a href="#timeline">Náš příběh</a></li>
             <li><a href="#event-details">Podrobnosti o akci</a></li>
             <li><a href="#rsvp">RSVP</a></li>
             <li><a href="programme.html">Detailní Program</a></li>
         </ul>
     </nav>
+    
+    <!-- <nav id="navbar">
+        <ul>
+            <li><a href="#timeline">Náš příběh</a></li>
+            <li><a href="#event-details">Podrobnosti o akci</a></li>
+            <li><a href="#rsvp">RSVP</a></li>
+            <li><a href="programme.html">Detailní Program</a></li>
+        </ul>
+    </nav> -->
     <header>
         <h1>S radostí Vás zveme na naši svatbu!</h1>
         <!-- <h2>01.03.2025</h2> -->
@@ -197,5 +207,12 @@
         <p> Radek & Sonka</p>
     </footer>
     <script src="script.js"></script>
+    <script>
+        function toggleMenu() {
+            const navLinks = document.getElementById('nav-links');
+            navLinks.classList.toggle('active');
+        }
+        </script>
+        
 </body>
 </html>
