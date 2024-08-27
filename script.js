@@ -77,6 +77,8 @@ function toggleDetails(element) {
         element.style.cursor = 'pointer'; /* Change cursor back to pointer when item is collapsed */
     }
 }
+
+//toggle menu for mobile device
 function toggleMenu() {
     const navLinks = document.getElementById('nav-links');
     navLinks.classList.toggle('active');
