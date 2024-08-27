@@ -47,20 +47,20 @@ const countdownInterval = setInterval(updateCountdown, 1000);
 updateCountdown();
 
 // Slideshow functionality
-let slideIndex = 0;
-showSlides();
+// let slideIndex = 0;
+// showSlides();
 
-function showSlides() {
-    let i;
-    const slides = document.getElementsByClassName("mySlides");
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-    }
-    slideIndex++;
-    if (slideIndex > slides.length) {slideIndex = 1}
-    slides[slideIndex-1].style.display = "block";
-    setTimeout(showSlides, 4000); // Change image every 4 seconds
-}
+// function showSlides() {
+//     let i;
+//     const slides = document.getElementsByClassName("mySlides");
+//     for (i = 0; i < slides.length; i++) {
+//         slides[i].style.display = "none";
+//     }
+//     slideIndex++;
+//     if (slideIndex > slides.length) {slideIndex = 1}
+//     slides[slideIndex-1].style.display = "block";
+//     setTimeout(showSlides, 4000); // Change image every 4 seconds
+// }
 function toggleQRCode(id) {
     var qrCodes = document.getElementById(id);
     if (qrCodes.style.display === "none") {
@@ -79,7 +79,16 @@ function toggleDetails(element) {
 }
 
 //toggle menu for mobile device
-function toggleMenu() {
-    const navLinks = document.getElementById('nav-links');
-    navLinks.classList.toggle('active');
+function toggleSideNav() {
+    const sideNav = document.getElementById('side-nav');
+    const body = document.body;
+
+    if (sideNav.classList.contains('open')) {
+        sideNav.classList.remove('open');
+        body.classList.remove('content-pushed');
+    } else {
+        sideNav.classList.add('open');
+        body.classList.add('content-pushed');
+    }
 }
+
