@@ -397,7 +397,7 @@ footer {
 }
 
 /* Navigation bar styles */
-#navbar {
+/* #navbar {
     background-color: #4b5c73;
     position: fixed;
     width: 100%;
@@ -406,10 +406,10 @@ footer {
     z-index: 1000;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     display: flex;
-    justify-content: flex-start; /* Align items to the start (left) */
+    justify-content: flex-start; 
     align-items: center;
-    padding: 1em; /* Single padding */
-}
+    padding: 1em; 
+} */
 
 #menu-icon {
     display: block; /* Show the menu icon */
@@ -419,37 +419,72 @@ footer {
     margin-right: auto; /* Pushes the icon to the left */
 }
 
-#nav-links {
-    list-style: none;
-    margin: 0;
-    padding: 1em 0 0 0; /* Add padding at the top to prevent covering the first item */
-    display: none; /* Hide the links initially */
-    flex-direction: column; /* Stack links vertically */
-    background-color: #4b5c73; /* Match navbar color */
-    width: 100%; /* Make sure it spans the full width */
-    text-align: center; /* Center the links */
+#navbar {
+    background-color: #4b5c73;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1002; /* Increase z-index so it's above the sidebar */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: flex-start; /* Align items to the start (left) */
+    align-items: center;
+    padding: 1em; /* Single padding */
+}
+
+#side-nav {
+    height: 100%; /* Full height */
+    width: 0; /* Initial width */
+    position: fixed; /* Fixed Sidebar (stay in place) */
+    z-index: 1001; /* Ensure sidebar is below the navbar */
+    top: 0;
+    left: 0;
+    background-color: rgba(75, 92, 115, 0.9); /* Sidebar color with transparency */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+    padding-top: 60px; /* Place content 60px from the top */
 }
 
 
-#nav-links li {
-    padding: 1em; /* Add padding around the links */
+#side-nav.open {
+    width: 250px; /* Set width when opened */
 }
 
-#nav-links li a {
+#side-nav ul {
+    padding: 0;
+    margin: 50px 0 0 0; /* Add margin to push content lower */
+    list-style-type: none;
+}
+
+#side-nav ul li {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 1.2em; /* Smaller font size */
+    color: white;
+    display: block;
+    transition: 0.3s;
+}
+
+#side-nav ul li a {
     color: white;
     text-decoration: none;
-    font-size: 1.2em;
-    font-family: 'Cinzel', serif;
     text-transform: uppercase;
 }
 
-#nav-links li a:hover {
+#side-nav ul li a:hover {
     color: #9bb0c6;
 }
 
-/* Dropdown Menu - visible on mobile toggle */
-#nav-links.active {
-    display: flex; /* Show the links when active */
+#side-nav .close-btn {
+    position: absolute;
+    top: 15px; /* Adjust top to ensure it's visible */
+    right: 15px; /* Adjust right to ensure it's not covered */
+    font-size: 2em;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    z-index: 1002;
 }
 
 /* General styles for smaller screens */
@@ -525,10 +560,26 @@ footer {
         left: 0;
         right: 0;
     }
+    
     .timeline-image img {
         width: 150px; /* Adjust width for smaller screens */
         height: 150px; /* Adjust height for smaller screens */
         border-radius: 50%; /* Ensure the images remain circular */
+    }
+    #side-nav ul {
+        position: absolute;
+        top: 90px; /* Position it just below the burger icon */
+        left: 0;
+        right: 0;
+        margin: 0;
+        padding: 0;
+        list-style-type: none; /* Ensure no extra space is added by list styling */
+        text-align: center; /* Center the text */
+    }
+
+    /* Adjust the sidebar itself */
+    #side-nav {
+        padding-top: 0; /* Remove padding to ensure the ul starts at the top */
     }
 }
 

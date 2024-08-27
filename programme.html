@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Detailní Program</title>
+    <title>Program</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,10 +13,18 @@
 </head>
 <body>
     <nav id="navbar">
-        <ul id="nav-links">
-            <li><a href="index.html">Zpět</a></li>
-        </ul>
+        <div id="menu-icon" onclick="toggleSideNav()">
+            <i class="fas fa-bars"></i>
+        </div>
     </nav>
+    
+    <div id="side-nav" class="side-nav">
+        <ul id="nav-links">
+            <li><a href="index.html">Domov</a></li>
+
+        </ul>
+    </div>
+    
     <header>
         <h2>Program</h2>
         <p>Coming Soon...</p>
