@@ -91,4 +91,9 @@ function toggleSideNav() {
         body.classList.add('content-pushed');
     }
 }
+document.getElementById("menu-icon").addEventListener("click", function() {
+    var navLinks = document.getElementById("nav-links");
+    navLinks.classList.toggle("active");
+});
+
 

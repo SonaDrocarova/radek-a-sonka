@@ -406,7 +406,7 @@ footer {
     z-index: 1000;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     display: flex;
-    justify-content: center; /* Center the content horizontally */
+    justify-content: flex-start; /* Align items to the start (left) */
     align-items: center;
     padding: 1em; /* Single padding */
 }
@@ -416,23 +416,26 @@ footer {
     font-size: 2em;
     color: white;
     cursor: pointer;
+    margin-right: auto; /* Pushes the icon to the left */
 }
 
-#navbar ul {
+#nav-links {
     list-style: none;
     margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center; /* Ensure the menu items are centered */
-    gap: 2em;
-    align-items: center;
+    padding: 1em 0 0 0; /* Add padding at the top to prevent covering the first item */
+    display: none; /* Hide the links initially */
+    flex-direction: column; /* Stack links vertically */
+    background-color: #4b5c73; /* Match navbar color */
+    width: 100%; /* Make sure it spans the full width */
+    text-align: center; /* Center the links */
 }
 
-#navbar ul li {
-    display: inline;
+
+#nav-links li {
+    padding: 1em; /* Add padding around the links */
 }
 
-#navbar ul li a {
+#nav-links li a {
     color: white;
     text-decoration: none;
     font-size: 1.2em;
@@ -440,57 +443,13 @@ footer {
     text-transform: uppercase;
 }
 
-#navbar ul li a:hover {
+#nav-links li a:hover {
     color: #9bb0c6;
 }
 
-/* Basic styles for the side navigation */
-.side-nav {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1001; /* Make sure it is above other elements */
-    top: 0;
-    left: 0;
-    background-color: rgba(75, 92, 115, 0.9); /* Semi-transparent background */
-    overflow-x: hidden;
-    transition: width 0.3s; /* Apply transition to width */
-    padding-top: 60px;
-    overflow-y: auto; /* Allow vertical scrolling if content overflows */
-}
-
-/* Side navigation menu items */
-/* Side navigation menu items */
-.side-nav ul {
-    list-style: none;
-    padding: 0;
-}
-
-.side-nav ul li {
-    padding: 8px 8px 8px 32px; /* Adjust padding around the text */
-    text-align: left;
-    font-size: 25px; /* Adjust font size of the links */
-    display: block;
-    transition: color 0.3s;
-}
-
-.side-nav ul li a {
-    color: #fff !important; /* Force white text color */
-    text-decoration: none !important; /* Remove underline */
-    text-transform: uppercase; /* Convert text to uppercase */
-    display: block;
-}
-
-.side-nav ul li a:hover {
-    color: #fff !important; /* Ensure the color remains white on hover */
-    text-decoration: none !important; /* Ensure no underline on hover */
-}
-
-
-
-/* When the side navigation is opened */
-.side-nav.open {
-    width: 250px; /* Adjust the width as needed */
+/* Dropdown Menu - visible on mobile toggle */
+#nav-links.active {
+    display: flex; /* Show the links when active */
 }
 
 /* General styles for smaller screens */
@@ -558,6 +517,18 @@ footer {
 
     .decorative-date::before, .decorative-date::after {
         width: 25%; /* Shorten the lines on smaller screens */
+    }
+
+    #nav-links {
+        position: absolute;
+        top: 100%; /* Position below the navbar */
+        left: 0;
+        right: 0;
+    }
+    .timeline-image img {
+        width: 150px; /* Adjust width for smaller screens */
+        height: 150px; /* Adjust height for smaller screens */
+        border-radius: 50%; /* Ensure the images remain circular */
     }
 }
 
