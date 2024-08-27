@@ -288,7 +288,7 @@ form button:hover {
 }
 
 .event-column {
-    flex: 1 1 calc(33.333% - 1em); /* Ensure three columns per row */
+    flex: 1 1 calc(50% - 1em); /* Ensure three columns per row */
     box-sizing: border-box;
     text-align: center;
     padding: 1em; /* Reduce padding */

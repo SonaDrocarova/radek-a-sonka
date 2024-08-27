@@ -23,7 +23,7 @@ document.getElementById('rsvp-form').addEventListener('submit', function(event) 
 
 // Countdown timer
 const countdownElement = document.getElementById('countdown');
-const weddingDate = new Date('2025-03-01T15:00:00'); // Set your wedding date and time here
+const weddingDate = new Date('2025-06-07T15:00:00'); // Set your wedding date and time here
 
 function updateCountdown() {
     const now = new Date();
