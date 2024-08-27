@@ -763,6 +763,8 @@ body {
         position: absolute;
         top: 100%;
         left: 0;
+        z-index: 1000; /* Ensure the menu appears above other elements */
+
     }
 
     #nav-links.active {
