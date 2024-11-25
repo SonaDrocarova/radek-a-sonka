@@ -17,8 +17,8 @@ header {
     background-size: cover;
     color: #4b5c73;
     padding: 1.5em 0; /* Reduce padding */
-    font-family: "Alex Brush", cursive;
-    font-weight: 100;
+    font-family: "WindSong", cursive;
+    font-weight: 400;
     font-style: normal;
     font-size: 1.5em;
 }
@@ -275,7 +275,7 @@ form button:hover {
 
 #event-details {
     padding: 1em; /* Reduce padding */
-    background-color: #c6d9ee; /* Light shade of blue */
+    background-color: #dbe5f0; /* Light shade of blue */
     border-radius: 8px;
 }
 
