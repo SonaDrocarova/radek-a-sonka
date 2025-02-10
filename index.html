@@ -52,50 +52,6 @@
         <div id="countdown"></div>
     </header>
     
-    <!-- <section id="timeline">
-        <h2>Náš příběh</h2>
-        <div class="timeline-container">
-            <div class="timeline-item">
-                <div class="timeline-image">
-                    <img src="slideshow/IMG_0041.JPG">
-                </div>
-                <div class="timeline-content">
-                    <h3>2021</h3>
-                    <h4>Prvé stretnutie</h4>
-                    <p>Prvýkrát sme sa stretli v Prahe na bare Albertov kde sme sa obaja ocitli so spoločnou skupinou kamarátov a známych.</p>
-                </div>
-                <div class="timeline-icon">
-                    <i class="fas fa-heart"></i>
-                </div>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-content">
-                    <h3>2022</h3>
-                    <h4>Spoločné bývanie</h4>
-                    <p>O skvelé spomienky na prvé spoločné bývanie sa nám postarala Bruselská štvrť Schaerbeek, kam sme sa prvýkrát nasťahovali do spoločnej domácnosti.</p>
-                </div>
-                <div class="timeline-image">
-                    <img src="slideshow/IMG_1514.jpg" >
-                </div>
-                <div class="timeline-icon">
-                    <i class="fas fa-home"></i>
-                </div>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-image">
-                    <img src="slideshow/7938b2a5-0678-45c2-80fe-83f394b271d8.JPG">
-                </div>
-                <div class="timeline-content">
-                    <h3>2024</h3>
-                    <h4>Zásnuby</h4>
-                    <p>Dňa 1.5.2024 sme sa zasnúbili v Pražskom parku Stromovka.</p>
-                </div>
-                <div class="timeline-icon">
-                    <i class="fas fa-ring"></i>
-                </div>
-            </div>
-        </div>
-    </section> -->
 
     <section id="event-details">
         <h2>Podrobnosti</h2>
@@ -107,7 +63,7 @@
                 <div class="event-text">
                     <h3>Svatební obřad</h3>
                     <p>Čas: 14:00</p>
-                    <p>Místo: Satatek Chefparade, Sukorady 31</p>
+                    <p>Místo: Statek Chefparade, Sukorady 31</p>
                     <p>Obrad, hostina aj zábava sa budú odohrávať na tomto mieste.</p>
                 </div>
             </div>
@@ -117,9 +73,31 @@
                 </div>
                 <div class="event-text">
                     <h3>Ubytování</h3>
-                    <p>Počet lôžok na svatbe je limitovaný, ak sa vám teda neušla posteľ, je možné spať v areáli v stane, v aute alebo v spoločenskej miestnosti vedľa kuchyne. </p>
+                    <p>Počet lôžok na svatbe je limitovaný, ak sa vám teda neušla posteľ, je možné spať v areáli v stane, v aute alebo v kľudnej miestnosti vo vedľajšej budove.</p>
+                    <div class="toggle-qr" onclick="toggleSlideshow()">
+                        <i class="fas fa-image"></i> Zobraziť miestnosť 
+                    </div>
+                    <div id="slideshowContainer" class="slideshow-container" style="display: none;">
+                        <div class="mySlides">
+                            <img src="slideshow/spolocenska miestnost2.jpg" style="width:100%">
+                        </div>
+                        <div class="mySlides">
+                            <img src="slideshow/spolcenska miestnost.jpg" style="width:100%">
+                        </div>
+                        <div class="mySlides">
+                            <img src="slideshow/spolocenska miestnost3.jpg" style="width:100%">
+                        </div>
+                        <div class="mySlides">
+                            <img src="slideshow/spolocenska miestnost4.jpg" style="width:100%">
+                        </div>
+                        
+                        <!-- Next and Previous buttons -->
+                        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                    </div>
                 </div>
             </div>
+            
             <div class="event-column">
                 <div class="event-icon">
                     <i class="fas fa-gift"></i>
@@ -165,9 +143,20 @@
                 </div>
                 <div class="event-text">
                     <h3>Doprava</h3>
-                    <p>Na místě je dostatek parkovacích míst. Pokud nepřijedete autem, rádi pro vás zařídíme odvoz z Mladé Boleslavi.</p>
+                    <p>Na místě je dostatek parkovacích míst. Pokud nepřijedete autem, rádi pro vás zařídíme odvoz z Mladé Boleslavi. Parkovať prosíme podľa uvedeného plánu, na modro vyznačených zónach.</p>
+            
+                    <!-- Toggle button to show/hide parking plan -->
+                    <div class="toggle-qr" onclick="toggleParkingPlan()">
+                        <i class="fas fa-map"></i> Zobrazit parkovací plán
+                    </div>
+            
+                    <!-- Parking Plan Container (Initially Hidden) -->
+                    <div id="parkingPlanContainer" class="pdf-container" style="display: none;">
+                        <iframe src="Plánek parkování.pdf" width="100%" height="400px"></iframe>
+                    </div>
                 </div>
             </div>
+            
         </div>
     </section>
     
@@ -179,7 +168,7 @@
 
     
     <section id="rsvp">
-        <h2>RSVP</h2>
+        <h2>Formulár pre potvrdenie účasti:</h2>
         <form id="rsvp-form" action="https://formspree.io/f/mnnajzrz" method="POST">
             <label for="name">Jméno:</label>
             <input type="text" id="name" name="name" required>

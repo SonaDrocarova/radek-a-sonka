@@ -61,6 +61,44 @@ updateCountdown();
 //     slides[slideIndex-1].style.display = "block";
 //     setTimeout(showSlides, 4000); // Change image every 4 seconds
 // }
+let slideIndex = 0;
+
+function toggleSlideshow() {
+    const slideshow = document.getElementById('slideshowContainer');
+    if (slideshow.style.display === "none") {
+        slideshow.style.display = "block";
+        slideIndex = 0;
+        showSlides(slideIndex);
+    } else {
+        slideshow.style.display = "none";
+    }
+}
+
+function plusSlides(n) {
+    showSlides(slideIndex += n);
+}
+
+function showSlides(n) {
+    let slides = document.getElementsByClassName("mySlides");
+    if (n >= slides.length) { slideIndex = 0 }
+    if (n < 0) { slideIndex = slides.length - 1 }
+    
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    
+    slides[slideIndex].style.display = "block";
+}
+
+function toggleParkingPlan() {
+    const parkingPlan = document.getElementById('parkingPlanContainer');
+    if (parkingPlan.style.display === "none") {
+        parkingPlan.style.display = "block";
+    } else {
+        parkingPlan.style.display = "none";
+    }
+}
+
 function toggleQRCode(id) {
     var qrCodes = document.getElementById(id);
     if (qrCodes.style.display === "none") {

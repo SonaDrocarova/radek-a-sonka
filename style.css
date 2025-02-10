@@ -601,3 +601,66 @@ footer {
         width: 20%; /* Further shorten the lines on very small screens */
     }
 }
+/* Slideshow container */
+.slideshow-container {
+    position: relative;
+    max-width: 600px;
+    margin: auto;
+    text-align: center;
+    padding-top: 10px;
+}
+
+/* Hide slides by default */
+.mySlides {
+    display: none;
+}
+
+/* Next & Previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 10px;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    transition: 0.6s ease;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+}
+
+.prev {
+    left: 5px;
+}
+
+.next {
+    right: 5px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Toggle button style */
+.toggle-slideshow {
+    cursor: pointer;
+    color: #4b5c73;
+    text-decoration: underline;
+    font-weight: bold;
+    margin-top: 5px;
+    display: inline-block;
+}
+
+.toggle-slideshow:hover {
+    color: #9bb0c6;
+}
+.pdf-container {
+    text-align: center;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
