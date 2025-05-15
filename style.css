@@ -664,3 +664,68 @@ footer {
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+/* Make programme-item horizontal */
+.programme-item {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    padding: 1em;
+    background-color: #ffffff;
+    border-radius: 8px;
+    margin: 0.5em auto;
+    max-width: 700px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Keep icon centered and circular */
+.programme-icon {
+    width: 60px;
+    height: 60px;
+    background-color: #4b5c73;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.programme-icon i {
+    color: white;
+    font-size: 24px;
+}
+
+/* Style the time and name text */
+.programme-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1.5em;
+    font-family: 'Cinzel', serif;
+    color: #4b5c73;
+    font-size: 1.2em;
+}
+
+/* Style time */
+.programme-content h3 {
+    margin: 0;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+/* Style name */
+.programme-content p {
+    margin: 0;
+    font-style: italic;
+    font-size: 1.1em;
+}
+@media (max-width: 600px) {
+    .programme-item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .programme-content {
+        flex-direction: column;
+        gap: 0.2em;
+    }
+}
